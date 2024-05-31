@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon  -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Title  -->
+    <title>Todo app</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- Create New Todo Section  -->
+    <section class="section-create-new-todo">
+      <div class="section-create-new-todo__inner">
+        <h2 class="visually-hidden">Create new todo here</h2>
+        <div class="section-create-new-todo__container container">
+          <div class="logo-theme-toggler-wrapper">
+            <img
+              class="logo-theme-toggler-wrapper__logo"
+              src="img/logo.svg"
+              alt="Logo"
+              width="167"
+              height="40"
+            />
+            <button
+              class="logo-theme-toggler-wrapper__theme-toggler theme-toggler"
+              id="themeToggler"
+            >
+              <span class="theme-toggler__inner"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <!-- Add dynamic number -->
+      <div id="inputs-con">
+        <div></div>
+        <input
+          type="text"
+          placeholder="Create a new todo..."
+          id="add-todo"
+          required />
+      </div>
+
+      <div id="todo-con">
+        <div id="list-con"></div>
+        <div id="itemsleft">
+          <p><span id="numbersLeft">0</span> items left</p>
+          <button type="reset" id="reset">Clear Completed</button>
+        </div>
+      </div>
+
+      <div id="nav-con">
+        <button id="all">All</button>
+        <button id="active">Active</button>
+        <button id="completed">Completed</button>
+      </div>
+    </main>
+
+    <!-- loader -->
+    <div class="loader-wrapper" id="loader">
+      <span class="loader"></span>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>
